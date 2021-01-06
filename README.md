@@ -5,7 +5,7 @@ directory or `template.yml`. Please visit my [website](https://www.komlalebu.com
 
 # Action
 This action is forked from  falnyr
-[falnyr/aws-sam-deploy-action@v1.2.1](https://github.com/falnyr/aws-sam-deploy-action)
+[falnyr/aws-sam-deploy-action](https://github.com/falnyr/aws-sam-deploy-action)
 `'Jan Alfred Richter <falnyr@gmail.com>'`
 
 
