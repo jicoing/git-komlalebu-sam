@@ -1,7 +1,7 @@
 
 # CI/CD Backend
 I am setting up my #Cloudresume CI/CD backend with the help of the below action.
-The SAM application gets packaged and deployed on any changes to my python code in `komlal_function`
+The SAM application gets packaged and deployed on any changes to my python code in `komla_function`
 directory or `template.yml`. Please visit my [website](https://www.komlalebu.com) for more information.
 
 # Action
@@ -24,4 +24,9 @@ Once the package is built the below command uploads the output-template-file to 
 
 The below command deploys the SAM code in AWS. Thus creating the API and Lambda function in AWS.
 `sam deploy --template-file packaged.yaml --capabilities CAPABILITY_IAM --stack-name aws-sam-komlalebu --region ap-south-1 --profile aws-devops`
+
+The below environment parameters have been passed as secrets for security purposes.
+        AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY
+        AWS_DEPLOY_BUCKET
 
