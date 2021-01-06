@@ -1,5 +1,5 @@
 
-I am setting up my #Cloudresume backend CI/CD Backend with the help of the below action.
+I am setting up my #Cloudresume CI/CD backend with the help of the below action.
 The SAM application gets packaged and deployed on any changes to my python code in `komlal_function`
 directory or `template.yml`. Please visit my [website](https://www.komlalebu.com) for more information.
 
