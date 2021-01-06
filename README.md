@@ -12,9 +12,9 @@ This action is forked from  falnyr
 
 # Purpose
 This action is enabling the deployment of my cloudresume CI/CD backend infrastructure using the  sam template I prepared.
-Infrastructure consisting of : 1. Lambda Function - komlalebuFunction
-                                2. API - komlalebuAPI
-                                3. DynamoDB Tabe - komlalebuTable
+Infrastructure consisting of : 1. Lambda Function - komlalebuFunction.
+                               2. API - komlalebuAPI.
+                               3. DynamoDB Tabe - komlalebuTable.
 
 The below command builds the packaage in SAM CLI.
 `sam build`
