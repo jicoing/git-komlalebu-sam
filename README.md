@@ -30,3 +30,24 @@ The below environment parameters have been passed as secrets for security purpos
         AWS_SECRET_ACCESS_KEY
         AWS_DEPLOY_BUCKET
 
+# Usage
+name: "Deploy SAM Stack to Production"
+on: 
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: falnyr/aws-sam-deploy-action@v1.2.1
+      env:
+        TEMPLATE: 'template.yaml'
+        AWS_STACK_NAME: aws-sam-komlalebu
+        AWS_REGION: 'ap-south-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEPLOY_BUCKET: ${{ secrets.AWS_DEPLOY_BUCKET }}
+
