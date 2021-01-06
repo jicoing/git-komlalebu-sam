@@ -30,7 +30,7 @@ The below environment parameters have been passed as secrets for security purpos
         AWS_SECRET_ACCESS_KEY
         AWS_DEPLOY_BUCKET
 
-# Usage
+# Usage - ci.yml
                 name: "Deploy SAM Stack to Production"
                 on: 
                 push:
