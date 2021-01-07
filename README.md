@@ -26,8 +26,8 @@ The below command deploys the SAM code in AWS. Thus creating the API and Lambda 
 `sam deploy --template-file packaged.yaml --capabilities CAPABILITY_IAM --stack-name aws-sam-komlalebu --region ap-south-1 --profile aws-devops`
 
 The below environment parameters have been passed as secrets for security purposes.
-        AWS_ACCESS_KEY_ID
-        AWS_SECRET_ACCESS_KEY
+        AWS_ACCESS_KEY_ID,
+        AWS_SECRET_ACCESS_KEY,
         AWS_DEPLOY_BUCKET
 
 # Usage - ci.yml
