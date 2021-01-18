@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: jicoing/aws-sam-deploy-action
+    - uses: jicoing/aws-sam-deploy-action@master
       env:
         TEMPLATE: 'template.yaml'
         AWS_STACK_NAME: aws-sam-komlalebu
