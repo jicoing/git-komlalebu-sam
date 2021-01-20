@@ -5,7 +5,7 @@ on:
     - master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,9 +19,9 @@ jobs:
         pip install -r requirements.txt
     - name: Run tests with pytest
       run: pytest 
-      
+
   deploy:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
