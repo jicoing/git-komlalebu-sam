@@ -6,7 +6,7 @@ import boto3
 from time import gmtime, strftime
 
 # create a DynamoDB object using the AWS SDK
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb',region_name='ap-south-1')
 # use the DynamoDB object to select our table
 table = dynamodb.Table('komlalebuTable')
 # store the current time in a human readable format in a variable

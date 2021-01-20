@@ -1,5 +1,5 @@
 import json
-import boto3
+
 import pytest
 
 from komla_function.app import lambda_handler
