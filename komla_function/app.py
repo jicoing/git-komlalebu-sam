@@ -30,7 +30,7 @@ def lambda_handler(event, context):
 # return a properly formatted JSON object
        return {
         'statusCode': 200,
-        'body': json.dumps(' Visitor number ' + visitor)
+        
 
     }
 
