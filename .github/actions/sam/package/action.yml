@@ -1,0 +1,9 @@
+name: 'AWS SAM Deploy'
+description: 'Test and deploy AWS SAM Stack'
+author: 'jicoing'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
