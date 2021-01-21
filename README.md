@@ -7,7 +7,7 @@ Stack consists of API, Lambda Function and DynamoDB Table.
 
 # Action
 The action has two jobs `test` and `deploy`.
- `test` - check the integrity of my lambda function.
+ `test` - checks the integrity of my lambda function.
  `deploy` - deploys the entire SAM stack in AWS and needs `test` to be successful as a dependency.
 
                 jobs:
