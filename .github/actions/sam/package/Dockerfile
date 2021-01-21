@@ -1,8 +1,21 @@
-FROM python:3.8-alpine
+FROM amazonlinux:2 as installer
+ARG EXE_FILENAME=awscli-exe-linux-x86_64.zip
+COPY $EXE_FILENAME .
+RUN yum update -y \
+  && yum install -y unzip \
+  && unzip $EXE_FILENAME \
+  # The --bin-dir is specified so that we can copy the
+  # entire bin directory from the installer stage into
+  # into /usr/local/bin of the final stage without
+  # accidentally copying over any other executables that
+  # may be present in /usr/local/bin of the installer stage.
+  && ./aws/install --bin-dir /aws-cli-bin/
 
-ENV AWSCLI_VERSION='1.5.2'
+FROM amazonlinux:2
+RUN yum update -y \
+  && yum install -y less groff \
+  && yum clean all
 
-RUN pip install --quiet --no-cache-dir awscliv2==${AWSCLI_VERSION}
 
 
 COPY entrypoint.sh /entrypoint.sh
