@@ -1,8 +1,8 @@
 FROM python:3.8-alpine
 
-ENV AWSCLI_VERSION='2.1.20'
+ENV AWSCLI_VERSION='1.5.2'
 
-RUN pip install --quiet --no-cache-dir awscli==${AWSCLI_VERSION}
+RUN pip install --quiet --no-cache-dir awscliv2==${AWSCLI_VERSION}
 
 
 COPY entrypoint.sh /entrypoint.sh
