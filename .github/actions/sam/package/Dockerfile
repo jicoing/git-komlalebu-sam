@@ -1,8 +1,10 @@
-FROM alpine:3.11
+FROM alpine:latest
 
-ENV GLIBC_VER=2.31-r0
+LABEL version="1.0.0"
 
+# install glibc compatibility for alpine
 RUN apk --no-cache add \
+        bash \
         binutils \
         curl \
     && curl -sL https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub \
