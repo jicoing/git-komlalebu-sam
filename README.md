@@ -22,13 +22,10 @@ Infrastructure consisting of : 1. Lambda Function - komlalebuFunction.
                                2. API - komlalebuAPI.
                                3. DynamoDB Tabe - komlalebuTable.
 
-The below command builds the packaage in SAM CLI.
-`sam build`
-
-Once the package is built the below command uploads the output-template-file to my S3 bucket.
+The below command packages the lambda source code, test, and the template.yml as output-template-file and uploads to my S3 bucket.
 `sam package --output-template-file serverless-output.yaml --s3-bucket [YOUR BUCKET NAME] --region ap-south-1 --profile aws-devops`
 
-The below command deploys the SAM code in AWS. Thus creating the API and Lambda function in AWS.
+The below command deploys the SAM stack in AWS from the output-template-file. Thus creating the API, DynamoDB table and Lambda function in AWS.
 `sam deploy --template-file packaged.yaml --capabilities CAPABILITY_IAM --stack-name aws-sam-komlalebu --region ap-south-1 --profile aws-devops`
 
 The below environment parameters have been passed as secrets for security purposes.
