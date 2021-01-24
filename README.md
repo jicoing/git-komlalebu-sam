@@ -18,9 +18,9 @@ The action has two jobs `test` and `deploy`.
 
 # Purpose
 This action is enabling the deployment of my cloudresume CI/CD backend infrastructure using the  sam template I prepared.
-Infrastructure consisting of : 1. Lambda Function - komlalebuFunction.
+Infrastructure consisting of : [1. Lambda Function - komlalebuFunction.
                                2. API - komlalebuAPI.
-                               3. DynamoDB Tabe - komlalebuTable.
+                               3. DynamoDB Tabe - komlalebuTable.]
 
 The below command packages the lambda source code, test, and the template.yml as output-template-file and uploads to my S3 bucket.
 `sam package --output-template-file serverless-output.yaml --s3-bucket [YOUR BUCKET NAME] --region ap-south-1 --profile aws-devops`
