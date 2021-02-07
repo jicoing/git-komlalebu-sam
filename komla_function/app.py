@@ -18,7 +18,7 @@ def lambda_handler(event, context):
        try:
             event = json.loads(event['body'])
             visitor = event['visitorCount'] +' '+ event['visitorResponse']
-# write name and time to the DynamoDB table using the object we instantiated and save response in a variable
+# write 'visitor' and time to the DynamoDB table using the object we instantiated and save response in a variable
             response = table.put_item(
                             Item={
                                 'id': visitor,
