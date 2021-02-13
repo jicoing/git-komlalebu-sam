@@ -32,13 +32,22 @@ Resources:
             Path: /
             Method: post
   komlalebuTableTest:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      PrimaryKey:
-        Name: id
-        Type: String
-      TableName: komlalebuTableTest
-      BillingMode: PAY_PER_REQUEST
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: komlalebuTableTest
+    BillingMode: PAY_PER_REQUEST
+    AttributeDefinitions:
+      - AttributeName: comments
+        AttributeType: S
+      - AttributeName: id
+        AttributeType: S
+    KeySchema:
+      - AttributeName: id
+        KeyType: Hash
+    # Setting the capacity
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
 
 
 
