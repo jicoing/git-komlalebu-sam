@@ -60,10 +60,10 @@ Resources:
     GlobalSecondaryIndexes:
       - IndexName: comments-index
         KeySchema:
-          - AttributeName: comments
-            KeyType: HASH
-          Projection:
-            ProjectionType: KEYS_ONLY
+        - AttributeName: comments
+          KeyType: HASH
+        Projection:
+          ProjectionType: KEYS_ONLY
 
 
 
