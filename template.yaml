@@ -38,6 +38,7 @@ Resources:
         Name: id
         Type: String
       TableName: komlalebuTable
+      BillingMode: PAY_PER_REQUEST
 
 
 
