@@ -37,7 +37,7 @@ Resources:
       PrimaryKey:
         Name: id
         Type: String
-      TableName: komlalebuTable
+      TableName: komlalebuTableTest
       BillingMode: PAY_PER_REQUEST
 
 
