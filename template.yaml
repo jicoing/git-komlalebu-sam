@@ -39,6 +39,14 @@ Resources:
         Type: String
       TableName: komlalebuTable
 
+  komlalebuTable2:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+      TableName: komlalebuTable2
+
 
 
 
