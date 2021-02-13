@@ -40,7 +40,7 @@ Resources:
       TableName: komlalebuTable
 
   komlalebuTable3:
-    Type: AWS::Serverless::SimpleTable
+    Type: AWS::DynamoDB::Table
     Properties:
       PrimaryKey:
         Name: id
