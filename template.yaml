@@ -46,9 +46,9 @@ Resources:
     BillingMode: PAY_PER_REQUEST
     AttributeDefinitions:
       - AttributeName: comments
-        AttributeType: S
+        AttributeType: String
       - AttributeName: id
-        AttributeType: S
+        AttributeType: String
     KeySchema:
       - AttributeName: id
         KeyType: Hash
