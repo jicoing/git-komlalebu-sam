@@ -39,32 +39,6 @@ Resources:
         Type: String
       TableName: komlalebuTable
 
-  komlalebuTableTest:
-  Type: AWS::Serverless::Table
-  Properties:
-    TableName: komlalebuTableTest
-    BillingMode: PAY_PER_REQUEST
-    AttributeDefinitions:
-      - AttributeName: comments
-        AttributeType: S
-      - AttributeName: id
-        AttributeType: S
-    KeySchema:
-      - AttributeName: id
-        KeyType: Hash
-    # Setting the capacity
-    ProvisionedThroughput:
-      ReadCapacityUnits: 1
-      WriteCapacityUnits: 1
-    # Declaring the GSI
-    GlobalSecondaryIndexes:
-      - IndexName: comments-index
-        KeySchema:
-        - AttributeName: comments
-          KeyType: HASH
-        Projection:
-          ProjectionType: KEYS_ONLY
-
 
 
 
