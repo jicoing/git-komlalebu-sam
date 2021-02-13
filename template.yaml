@@ -39,13 +39,31 @@ Resources:
         Type: String
       TableName: komlalebuTable
 
-  komlalebuTable3:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      PrimaryKey:
-        Name: id
-        Type: String
-      TableName: komlalebuTable3
+  komlalebuTableTest:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: komlalebuTableTest
+    BillingMode: PAY_PER_REQUEST
+    AttributeDefinitions:
+      - AttributeName: comments
+        AttributeType: S
+      - AttributeName: id
+        AttributeType: S
+    KeySchema:
+      - AttributeName: id
+        KeyType: Hash
+    # Setting the capacity
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+    # Declaring the GSI
+    GlobalSecondaryIndexes:
+      - IndexName: comments-index
+        KeySchema:
+        - AttributeName: comments
+          KeyType: HASH
+        Projection:
+          ProjectionType: KEYS_ONLY
 
 
 
