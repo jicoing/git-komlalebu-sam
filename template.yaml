@@ -38,6 +38,33 @@ Resources:
         Name: id
         Type: String
       TableName: komlalebuTable
+      
+  komlalebuTableTest:
+  Type: AWS::Serverless::Table
+  Properties:
+    AttributeDefinitions:
+      AttributeName: comments
+      AttributeType: String
+    KeySchema:
+      AttributeName: id
+      KeyType: Hash
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+    GlobalSecondaryIndexes:
+      IndexName: comments-index
+        KeySchema:
+          AttributeName: comments
+          KeyType: HASH
+        Projection:
+          ProjectionType: ALL
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    PrimaryKey:
+      Name: id
+      Type: String
+    TableName: komlalebuTableTest
 
 
 
