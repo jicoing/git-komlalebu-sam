@@ -32,7 +32,7 @@ Resources:
             Path: /
             Method: post
   komlalebuTable:
-    Type: AWS::Serverless::SimpleTable
+    Type: AWS::Serverless::Table
     Properties:
       PrimaryKey:
         Name: id
