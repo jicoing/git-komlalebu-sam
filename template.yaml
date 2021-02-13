@@ -32,7 +32,7 @@ Resources:
             Path: /
             Method: post
   komlalebuTableTest:
-    Type: AWS::Serverless::Table
+    Type: AWS::DynamoDB::Table
     Properties:
       PrimaryKey:
         Name: id
