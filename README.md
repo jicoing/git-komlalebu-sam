@@ -2,7 +2,7 @@
 # CI/CD Backend
 I am setting up my #Cloudresume CI/CD backend with the help of the below action.
 The SAM application stack is deployed on any changes to my lambda handler code in `komla_function`
-directory or `template.yml`, and push to master. Please visit my [blog](https://www.komlalebu.com) for more information.
+directory or `template.yml`, and push to master. Please visit my [bio](https://www.komlalebu.com) for more information.
 Stack consists of an API, a Lambda Function and a DynamoDB Table.
 
 # Action
