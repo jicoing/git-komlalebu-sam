@@ -1,4 +1,4 @@
-
+![Alt Text](https://s3.amazonaws.com/blog.komlalebu.com/hilltop.PNG)
 # CI/CD Backend
 I am setting up my #Cloudresume CI/CD backend with the help of the below action.
 The SAM application stack is deployed on any changes to my lambda handler code in `komla_function`
